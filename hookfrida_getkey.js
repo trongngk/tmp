@@ -128,7 +128,7 @@ function hookCipherInit2() {
     var cipherInit = Java.use('javax.crypto.Cipher')['init'].overload('int', 'java.security.Key');
     cipherInit.implementation = function (mode, secretKey) {
         console.log("[Cipher.init()]: mode: " + decodeMode(mode) + ", secretKey: " + secretKey.$className + " , cipherObj: " + this);
-		console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
+	console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
         var tmp = this.init(mode, secretKey);
     }
 }
@@ -137,7 +137,7 @@ function hookCipherInit3() {
     var cipherInit = Java.use('javax.crypto.Cipher')['init'].overload('int', 'java.security.Key', 'java.security.AlgorithmParameters');
     cipherInit.implementation = function (mode, secretKey, alParam) {
         console.log("[Cipher.init()]: mode: " + decodeMode(mode) + ", secretKey: " + secretKey.$className + " alParam:" + alParam + " , cipherObj: " + this);
-		console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
+	console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
         var tmp = this.init(mode, secretKey, alParam);
     }
 }
@@ -146,7 +146,7 @@ function hookCipherInit4() {
     var cipherInit = Java.use('javax.crypto.Cipher')['init'].overload('int', 'java.security.Key', 'java.security.spec.AlgorithmParameterSpec');
     cipherInit.implementation = function (mode, secretKey, spec) {
         console.log("[Cipher.init()]: mode: " + decodeMode(mode) + ", secretKey: " + secretKey.$className + " spec:" + spec + " , cipherObj: " + this);
-		console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
+	console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
         var tmp = this.init(mode, secretKey, spec);
     }
 }
@@ -163,7 +163,7 @@ function hookCipherInit6() {
     var cipherInit = Java.use('javax.crypto.Cipher')['init'].overload('int', 'java.security.Key', 'java.security.SecureRandom');
     cipherInit.implementation = function (mode, secretKey, secureRandom) {
         console.log("[Cipher.init()]: mode: " + decodeMode(mode) + ", secretKey: " + secretKey.$className + " secureRandom:" + secureRandom + " , cipherObj: " + this);
-		console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
+	console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
         var tmp = this.init(mode, secretKey, secureRandom);
     }
 }
@@ -172,7 +172,7 @@ function hookCipherInit7() {
     var cipherInit = Java.use('javax.crypto.Cipher')['init'].overload('int', 'java.security.Key', 'java.security.spec.AlgorithmParameterSpec', 'java.security.SecureRandom');
     cipherInit.implementation = function (mode, secretKey, spec, secureRandom) {
         console.log("[Cipher.init()]: mode: " + decodeMode(mode) + ", secretKey: " + secretKey.$className + " spec:" + spec + " secureRandom: " + secureRandom + " , cipherObj: " + this);
-		console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
+	console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
         var tmp = this.init(mode, secretKey, spec, secureRandom);
     }
 }
@@ -181,7 +181,7 @@ function hookCipherInit8() {
     var cipherInit = Java.use('javax.crypto.Cipher')['init'].overload('int', 'java.security.Key', 'java.security.AlgorithmParameters', 'java.security.SecureRandom');
     cipherInit.implementation = function (mode, secretKey, alParam, secureRandom) {
         console.log("[Cipher.init()]: mode: " + decodeMode(mode) + ", secretKey: " + secretKey.$className + " alParam:" + alParam + " secureRandom: " + secureRandom + " , cipherObj: " + this);
-		console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
+	console.log("Key",base64.getEncoder().encodeToString(secretKey.getEncoded()));
         var tmp = this.init(mode, secretKey, alParam, secureRandom);
     }
 }
