@@ -2,7 +2,7 @@ from Crypto.Cipher import DES3
 from base64 import b64decode
 
 # Given key and cipher
-key_b64 = "MjQxOTIwYTMwY2FjMTRkY2FlYzdhMThm"
+key_b64 = "<>"
 cipher_text_b64 = "SiAbinu8S77V2x04SaM6NtznSNpW7nUdn9Eq+ZeAOaX4e7ZXGrDnxrrUHGdEIP7Iypx1VQTHQO3yMjG6eyiFxg=="
 
 # Decode the base64 encoded key
